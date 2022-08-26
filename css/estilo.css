@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
+
+/* font-family: 'Edu TAS Beginner', cursive; */
+*{
+  margin: 0;
+  padding: 0;
+} 
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  font-family: 'Edu TAS Beginner', cursive;
+  /* background-color: #AED6F1 */
+}
+
+/* HEADER */
+.encabezado{
+  /* background-image: url('../img/logo.JPG'); */
+  background-color: #F1C40F  ;
+  background-position: left;
+  height: 30vh;
+  width: 100%;
+  position: relative; 
+  padding-top: 2rem;
+  padding-left: 2rem;
+  /* opacity: 80%; */
+  grid-area: header;
+}
+
+/* NAV */
+nav{
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  grid-area: nav;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 2rem;
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+/* MAIN */
+section{
+  margin: 1rem;
+  padding: 0.5rem;
+  height: 40rem;
+  /*uso flex*/
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between; 
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 25rem;
+
+}
+section img{
+  width: 25rem;
+  border-radius: 1rem;
+  padding-top: 5rem;
+}
+/* section div{
+  display:inline-block;
+} */
+
+
+/*footer*/
+
+footer{
+  margin-top: 5rem;
+  padding-top: 5rem;
+  background-color: blueviolet;
+  text-align: center;
+  grid-area: footer;
+}
+
+footer ul li{
+  display: inline-block;
+  margin: 2rem;
+}
+
+.seccionA{
+  grid-area: seccionA;
+  background-color: #F1C40F;
+}
+
+.seccionB{
+  grid-area: seccionB;
+  background-color: aqua;
+  }
+  .seccionC{
+    grid-area: seccionC;
+    background-color: azure;
+  }
+  
+  .seccionD{
+    grid-area: seccionD;
+    background-color: bisque;
+    }
+
+      
+.gridPadre {
+  display: grid;
+  grid-template-areas:
+"header header header header"
+"nav nav nav nav"
+"seccionA seccionB seccionC seccionD"
+"footer footer footer footer"
+;
+}
+.gridPadre1 {
+  display: grid;
+  grid-template-areas:
+"header header header header"
+"nav nav nav nav"
+"seccionA seccionB seccionA seccionB"
+"footer footer footer footer"
+;
+}
+.gridPadre2 {
+  display: grid;
+  grid-template-areas:
+"header header header header"
+"nav nav nav nav"
+"seccionA seccionB seccionC seccionD "
+"footer footer footer footer"
+;
+}
+/* .gridPadre3 {
+  display: grid;
+  grid-template-areas:
+"header header header header"
+"nav nav nav nav"
+"seccionA seccionB seccionC seccionD"
+"footer footer footer footer"
+;
+} */
+.gridPadre4 {
+  display: grid;
+  grid-template-areas:
+"header header header header"
+"nav nav nav nav"
+"seccionA seccionA seccionB seccionB"
+"footer footer footer footer"
+;
+}
+
+/* TABLETA*/
+
+@media (min-width: 700px) and (max-width:1100px){
+  .gridPadre{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "seccionA seccionB"
+    "seccionC seccionD"
+    "footer footer"
+    ;
+  }
+  section{
+    text-align: center;
+  }
+  section img{
+    width: 260px;
+  }
+
+}
+
+@media (min-width: 700px) and (max-width:1100px){
+  .gridPadre1{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "seccionA seccionA"
+    "seccionB seccionB"
+    "footer footer"
+    ;
+  }
+  section{
+    text-align: center;
+  }
+  section img{
+    width: 350px;
+  }
+
+}
+
+@media (min-width: 700px) and (max-width:1100px){
+  .gridPadre2{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "seccionA seccionB"
+    "seccionC seccionD"
+    "footer footer"
+    ;
+  }
+  section{
+    text-align: center;
+  }
+  section img{
+    width: 300px;
+  }
+  
+
+}
+/* @media (min-width: 700px) and (max-width:1100px){
+  .gridPadre3{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "seccionA seccionB"
+    "seccionC seccionC"
+    "footer footer"
+    ;
+  }
+  section{
+    text-align: center;
+  }
+  section img{
+    width: 300px;
+  }
+
+} */
+
+@media (min-width: 700px) and (max-width:1100px){
+  .gridPadre4{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "seccionA seccionB"
+    "footer footer"
+    ;
+  }
+  section{
+    text-align: center;
+  }
+  section img{
+    width: 300px;
+  }
+
+}
+/* MOVIL*/
+
+@media (max-width:699px){
+  .gridPadre{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "seccionA" 
+    "seccionB"
+    "seccionC" 
+    "seccionD"
+    "footer"
+    ;
+  }
+  nav{
+    position: static;
+  }
+  section{
+    text-align: center;
+  }
+  section img{
+    width: 250px;
+  }
+
+}
+
+@media (max-width:699px){
+  .gridPadre1{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "seccionA" 
+    "seccionB"
+    "footer"
+    ;
+  }
+  nav{
+    position: static;
+  }
+  section{
+    text-align: center;
+  }
+  section img{
+    width: 250px;
+  }
+
+}
+
+@media (max-width:699px){
+  .gridPadre2{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "seccionA" 
+    "seccionB"
+    "seccionC" 
+    "seccionD"
+    "footer"
+    ;
+  }
+  nav{
+    position: static;
+  }
+  section{
+    text-align: center;
+    height: 35rem;
+  }
+  section img{
+    width: 250px;
+  }
+
+}
+/* @media (max-width:699px){
+  .gridPadre3{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "seccionA" 
+    "seccionB"
+    "seccionC" 
+    "footer"
+    ;
+  }
+  nav{
+    position: static;
+  }
+  section{
+    text-align: center;
+    height: 35rem;
+  }
+  section img{
+    width: 250px;
+  }
+
+} */
+
+@media (max-width:699px){
+  .gridPadre4{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "seccionA" 
+    "seccionB" 
+    "footer"
+    ;
+  }
+  nav{
+    position: static;
+  }
+  section{
+    text-align: center;
+    height: 35rem;
+  }
+  section img{
+    width: 250px;
+  }
+
+}
+
+/****GALERIA****/
+.container-img{
+  width: 700px;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 100px;
+  gap: 20px;
+
+}
+
+.container-img .box-img figure{
+  width: 100px;
+  height: 100px;
+
+}
+
+.container-img .box-img img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+.container-img .box-img:nth-child(1){
+  grid-column-start: span 1;
+
+}
+
+.container-img .box-img:nth-child(4){
+  grid-row-start: span 1;
+}
+
+@media(min-width: 700px) and (max-width:1100px) {
+  .container-img{
+    width: 80%;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    grid-template-rows: 150px;
+    /* padding-left: 150px; */
+
+
+  }
+  .container-img .box-img:nth-child(1){
+    grid-column-start: span 1;
+   
+  }
+
+  .container-img .box-img{
+    padding-left: 80px;
+  }
+}
+
+@media(max-width:699px) {
+  .container-img{
+    width: 60%;
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+    grid-template-rows: 100px;
+    /* padding-left: 150px; */
+
+
+  }
+  .container-img .box-img:nth-child(1){
+    grid-column-start: span 1;
+   
+  }
+
+  .container-img .box-img{
+    padding-left: 80px;
+    /* padding-bottom: 20px; */
+  }
+  
+  
+}
+
+/*ANIMACIONES */
+
+@keyframes animacion{
+  0%{
+      width: 220px;
+  }
+
+  25%{
+      width: 240px;
+  }
+
+  50%{
+      width: 260px;
+  }
+  75%{
+      width: 280px;
+  }
+
+  100%{
+      width: 300px;
+  }
+}
+
+.animacion{
+  background-color: #45b39d;
+
+  /*NOMBRE DEL KEYFRAME*/
+  animation-name: animacion;
+
+  /*CANTIDAD DE REPETICIONES*/
+  
+  animation-iteration-count:initial;
+
+  /*SUAVIZAR LA ANIMACIÓN*/
+
+  animation-timing-function: ease-in;
+
+  /*DURACIÓN DE LA ANIMACIÓN*/
+
+  animation-duration: 2s;
+
+  /*TIEMPO QUE DEMORA EN COMENZAR OTRA VEZ*/
+
+  animation-delay: 1s;
+
+}
+
+/*EJEMPLO CON TEXTO*/
+
+@keyframes texto {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+
+.Animationh2{
+  animation-name: texto;
+  animation-duration: 2s;
+  animation-iteration-count:inherit;
+}
+
+
+.Animation1h2{
+  animation-name: texto;
+  animation-duration: 2s;
+  animation-iteration-count:infinite;
+}
+
+/*GRADIENTE CABECERA */
+.CajaLogo{
+  background-image: radial-gradient(#add100,
+  #7b920a);
+}
+
+/*GRADIENTE FOOTER */
+footer{
+  background-image: radial-gradient(#add100,
+  #7b920a);
+}
+
+/*TRANSICIONES LOGO*/
+
+.imgPromo:hover {
+  /* background-color: #e96443; */
+  height: 300px;
+  width: 300px;
+  transition: all 4s;
+}
